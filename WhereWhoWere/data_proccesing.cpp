@@ -19,9 +19,9 @@ std::vector<std::string> split_string(const std::string& str, const std::string 
 	return words;
 }
 
-Note convert_log_line(const std::string& line)
+users_file_line convert_log_line(const std::string& line)
 {
-	Note note;
+	users_file_line note;
 	std::vector<std::string> words = split_string(line, " \t");
 	note.ts = convert_str_to_time(words.at(0));
 	note.name = words.at(1);

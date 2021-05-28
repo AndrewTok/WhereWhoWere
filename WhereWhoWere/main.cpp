@@ -18,7 +18,7 @@ int main()
 	stringstream out;
 
 
-	map<time_t, place> user_places;
+	multimap<time_t, place> user_places;
 	string username = "user_1";
 
 	path_finder fnd;

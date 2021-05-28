@@ -140,12 +140,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="data_proccesing.h" />
+    <ClInclude Include="users_file_line.h" />
     <ClInclude Include="path_finder.h" />
+    <ClInclude Include="place.h" />
+    <ClInclude Include="point.h" />
+    <ClInclude Include="user.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="data_proccesing.cpp" />
+    <ClCompile Include="users_file_line.cpp" />
+    <ClCompile Include="usres_file_line.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="path_finder.cpp" />
+    <ClCompile Include="place.cpp" />
+    <ClCompile Include="point.cpp" />
+    <ClCompile Include="user.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

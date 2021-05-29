@@ -6,8 +6,10 @@
 
 #include "place.h"
 #include "point.h"
-#include "users_file_line.h"
+#include "user_position_info.h"
+#include "places_data_base.h"
 #include "user.h"
+#include "users_positions_data_base.h"
 
 //struct point
 //{
@@ -50,20 +52,17 @@ class path_finder final
 {
 public:
 
-	path_finder() = default;
-	~path_finder() = default;
-
 	//std::multimap<time_t, place> get_user_path(const std::vector<users_file_line>& parsed_file, const std::vector<place>& places_arr, const std::string& u_name);
 	
-	std::multimap<time_t, place> get_user_path(const std::vector<users_file_line>& parsed_file, const std::vector<place>& places_arr, const user& user);
+	static std::multimap<time_t, place> get_user_path(const users_positions_data_base& users, const places_data_base& places, const user& user);
 
 
 
 
 private:
 
-	place check_places(const std::vector<place>& places_arr, const point& pos);
-	std::vector<place> arr_get_places(const std::vector<place>& places_arr, const point& pos);
+	static place check_places(const std::vector<place>& places_arr, const point& pos);
+	static std::vector<place> arr_get_places(const std::vector<place>& places_arr, const point& pos);
 
 };
 

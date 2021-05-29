@@ -1,14 +1,24 @@
 #pragma once
 #include "point.h"
+
+
 #include <string>
-class place
+
+class place final
 {
 public:
-	bool is_point_inside(const point& pos) const;
+
+	place() = delete;
+
+	place(const std::string& name, const point& p1, const point& p2);
+
+	bool contains_point(const point& pos) const;
+
+	const std::string& get_name() const;
 
 private:
 	std::string name;
-	point first_point, second_point; // first - лева€ верхн€€, second - нижн€€ права€
+	point upper_left, lower_right;
 
 };
 

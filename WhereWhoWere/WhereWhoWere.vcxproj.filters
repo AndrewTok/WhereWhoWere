@@ -24,13 +24,25 @@
     <ClInclude Include="user.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="users_file_line.h">
+    <ClInclude Include="user_position_info.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="place.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="point.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="places_data_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="users_positions_data_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="places_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="users_movements_parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -41,13 +53,7 @@
     <ClCompile Include="path_finder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="user.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="usres_file_line.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="place.cpp">
@@ -56,7 +62,19 @@
     <ClCompile Include="point.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="users_file_line.cpp">
+    <ClCompile Include="user_position_info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="places_data_base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="users_positions_data_base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="places_parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="users_movements_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

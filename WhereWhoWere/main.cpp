@@ -7,6 +7,9 @@
 
 
 #include "data_proccesing.h"
+#include "places_data_base.h"
+#include "users_movements_parser.h"
+#include "places_parser.h"
 #include "path_finder.h"
 
 using namespace std;
@@ -21,17 +24,18 @@ int main()
 	multimap<time_t, place> user_places;
 	string username = "user_1";
 
+	user u(username);
+
 	path_finder fnd;
 
-	vector<place> places = get_places_arr(places_inp);
-	vector<Note> log_arr = get_log_arr(path_inp);
+	places_data_base places = places_parser::parse(places_inp);
+	users_positions_data_base u_pos = users_movements_parser::parse(path_inp);
 
-	user_places = fnd.get_user_path(log_arr, places, username);
+	user_places = fnd.get_user_path(u_pos, places, u);
 
-	for (auto& pair : user_places)
+	for (auto& [time_st, plc] : user_places)
 	{
-		place curr_place = pair.second;
-		out << pair.first << " " << curr_place.name << endl;
+		out << time_st << " " << plc.get_name() << endl;
 	}
 
 	cout << out.str() << endl;

@@ -1,11 +1,17 @@
 #pragma once
+#include <string>
 class user
 {
-	std::string get_name() const;
+public:
+	user(const std::string& u_id);
+
+	const std::string& get_user_id() const;
+
+	bool operator== (const user& r_user);
 
 private:
 
-	std::string name;
+	std::string user_id;
 
 
 };

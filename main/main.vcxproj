@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{51b6fe98-0418-4bbb-b843-10a45eadce4a}</ProjectGuid>
-    <RootNamespace>WhereWhoWere</RootNamespace>
+    <ProjectGuid>{4c627603-1ed3-45c6-9840-53ee86de7574}</ProjectGuid>
+    <RootNamespace>main</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>WhereWhoWas</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -41,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -117,11 +116,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)$(Platform)\WhereWhoWas</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>WhereWhoWas.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -141,28 +143,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="data_proccesing.h" />
-    <ClInclude Include="places_data_base.h" />
-    <ClInclude Include="places_parser.h" />
-    <ClInclude Include="users_movements_parser.h" />
-    <ClInclude Include="users_positions_data_base.h" />
-    <ClInclude Include="user_position_info.h" />
-    <ClInclude Include="path_finder.h" />
-    <ClInclude Include="place.h" />
-    <ClInclude Include="point.h" />
-    <ClInclude Include="user.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="data_proccesing.cpp" />
-    <ClCompile Include="places_data_base.cpp" />
-    <ClCompile Include="places_parser.cpp" />
-    <ClCompile Include="users_movements_parser.cpp" />
-    <ClCompile Include="users_positions_data_base.cpp" />
-    <ClCompile Include="user_position_info.cpp" />
-    <ClCompile Include="path_finder.cpp" />
-    <ClCompile Include="place.cpp" />
-    <ClCompile Include="point.cpp" />
-    <ClCompile Include="user.cpp" />
+    <ClCompile Include="..\WhereWhoWere\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

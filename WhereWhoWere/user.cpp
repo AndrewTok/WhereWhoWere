@@ -10,7 +10,7 @@ const std::string& user::get_user_id() const
     return user_id;
 }
 
-bool user::operator==(const user& r_user)
+bool user::operator==(const user& r_user) const
 {
     return user_id == r_user.get_user_id();
 }

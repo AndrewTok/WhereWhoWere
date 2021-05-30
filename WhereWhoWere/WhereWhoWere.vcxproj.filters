@@ -42,7 +42,7 @@
     <ClInclude Include="places_parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="users_movements_parser.h">
+    <ClInclude Include="users_positions_parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -74,7 +74,7 @@
     <ClCompile Include="places_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="users_movements_parser.cpp">
+    <ClCompile Include="users_positions_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

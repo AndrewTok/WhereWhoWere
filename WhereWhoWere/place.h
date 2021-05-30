@@ -16,6 +16,12 @@ public:
 
 	const std::string& get_name() const;
 
+	const point& get_lower_right_p() const;
+
+	const point& get_upper_left_p() const;
+
+	bool operator==(const place& _place) const;
+
 private:
 	std::string name;
 	point upper_left, lower_right;

@@ -7,7 +7,7 @@ public:
 
 	const std::string& get_user_id() const;
 
-	bool operator== (const user& r_user);
+	bool operator== (const user& r_user) const;
 
 private:
 

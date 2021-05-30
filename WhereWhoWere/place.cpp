@@ -20,3 +20,18 @@ const std::string& place::get_name() const
 {
 	return name;
 }
+
+const point& place::get_lower_right_p() const
+{
+	return lower_right;
+}
+
+const point& place::get_upper_left_p() const
+{
+	return upper_left;
+}
+
+bool place::operator==(const place& _place) const
+{
+	return (_place.get_name() == name) && (lower_right == _place.get_lower_right_p()) && (upper_left == _place.get_upper_left_p());
+}

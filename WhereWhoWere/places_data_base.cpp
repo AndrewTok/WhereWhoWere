@@ -1,5 +1,10 @@
 #include "places_data_base.h"
 
+places_data_base::places_data_base(const std::vector<place>& _places)
+{
+    places = _places;
+}
+
 void places_data_base::insert(const place& _place)
 {
 	places.insert(places.end(), _place);
@@ -21,4 +26,16 @@ std::vector<place> places_data_base::choose_places_by_point(const point& p) cons
         }
     }
     return curr_places;
+}
+
+bool places_data_base::contains(const place& _place) const
+{
+    for (auto& plc : places)
+    {
+        if (_place == plc)
+        {
+            return true;
+        }
+   }
+    return false;
 }

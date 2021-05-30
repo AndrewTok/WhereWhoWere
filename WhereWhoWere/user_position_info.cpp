@@ -26,3 +26,8 @@ const point& user_position_info::get_pos() const
 {
 	return pos;
 }
+
+bool user_position_info::operator==(const user_position_info& up_inf) const
+{
+	return (up_inf.get_pos() == pos)&&(up_inf.get_ts() == ts)&&(up_inf.get_user() == get_user());
+}

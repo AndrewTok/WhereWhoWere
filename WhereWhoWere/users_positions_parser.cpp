@@ -1,7 +1,7 @@
-#include "users_movements_parser.h"
+#include "users_positions_parser.h"
 #include "data_proccesing.h"
 
-user_position_info users_movements_parser::get_user_position(const std::string& line)
+user_position_info users_positions_parser::get_user_position(const std::string& line)
 {
 	std::vector<std::string> words = split_string(line, " \t");
 	time_t ts = convert_str_to_time(words.at(0));
@@ -11,7 +11,7 @@ user_position_info users_movements_parser::get_user_position(const std::string& 
 	return u_info;
 }
 
-users_positions_data_base users_movements_parser::parse(std::istream& input)
+users_positions_data_base users_positions_parser::parse(std::istream& input)
 {
 	std::string line;
 	users_positions_data_base users_positions;

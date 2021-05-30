@@ -28,6 +28,11 @@ std::multimap<time_t, place> path_finder::get_user_path(const users_positions_da
     {
         point curr_point = note.get_pos();
         std::vector<place> curr_places = places.choose_places_by_point(curr_point);
+        if (curr_places.empty())
+        {
+            place no_where("", curr_point, curr_point);
+            user_places.insert(std::pair<time_t, place>(note.get_ts(), no_where));
+        }
         for (auto& plc : curr_places)
         {
             std::pair<time_t, place> path_element(note.get_ts(), plc);

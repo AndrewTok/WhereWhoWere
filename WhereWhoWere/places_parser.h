@@ -1,7 +1,7 @@
 #pragma once
 #include "places_data_base.h"
 
-class places_parser
+class places_parser final
 {
 public:
 	static place get_place(const std::string& line);

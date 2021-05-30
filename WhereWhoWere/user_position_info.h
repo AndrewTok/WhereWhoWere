@@ -8,7 +8,7 @@
 #include "place.h"
 #include "user.h"
 
-struct user_position_info
+struct user_position_info final
 {
 	user_position_info(time_t _ts, const std::string& u_id, const point& p);
 
@@ -19,6 +19,8 @@ struct user_position_info
 	time_t get_ts() const;
 
 	const point& get_pos() const;
+
+	bool operator==(const user_position_info& up_inf) const;
 
 private:
 	time_t ts; // time when user was in this pos

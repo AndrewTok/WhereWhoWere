@@ -4,3 +4,8 @@
 //{
 //	return _place.contains_point(*this);
 //}
+
+bool point::operator==(const point& p) const
+{
+    return (p.x == x) && (p.y == y);
+}

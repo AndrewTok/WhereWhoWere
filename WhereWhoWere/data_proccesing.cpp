@@ -22,8 +22,7 @@ std::vector<std::string> split_string(const std::string& str, const std::string 
 time_t convert_str_to_time(const std::string& str)
 {
 	time_t ts;
-	std::stringstream str_stream;
-	str_stream << str;
+	std::stringstream str_stream(str);
 	str_stream >> ts;
 	return ts;
 }
